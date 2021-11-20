@@ -2,7 +2,7 @@ const express = require('express')
 const checkEmail = require('../middlewares/validateEmail')
 const checkEmailDomain = require('../middlewares/checkEmailDomain')
 const router = express.Router()
-const sendNewEmail = require('../nodeMailer/index')
+const sendNewEmail = require('../nodemailer/index')
 require('dotenv').config()
 
 router.post('/', checkEmail, checkEmailDomain, async (req, res) => {
