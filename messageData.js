@@ -1,7 +1,8 @@
 module.exports =  {
     eng: {
-        first: "Thanks for get in contact, I will return as soon as possible.",
-        second: `<p>This project is part of my <a href="https://gabrielp-oliveira.github.io/" target="_blank" > <span 
+        contact: "Thanks for get in contact, I will return as soon as possible.",
+        succes: 'Succes in Delivered the Message',
+        feedback: `<p>This project is part of my <a href="https://gabrielp-oliveira.github.io/" target="_blank" > <span 
         style="
     color: blue;
     font-weight: 600;"
@@ -12,8 +13,9 @@ module.exports =  {
 
     },
     pt: {
-        first: 'Obrigado por entrar em contato, responderei o mais breve possivel.',
-        second: `<p>Este projeto faz parte do meu <a href="https://gabrielp-oliveira.github.io/" target="_blank" > <span 
+        contact: 'Obrigado por entrar em contato, responderei o mais breve possivel.',
+        succes: 'Sucesso ao entregar mensagem.',
+        feedback: `<p>Este projeto faz parte do meu <a href="https://gabrielp-oliveira.github.io/" target="_blank" > <span 
         style="
     color: blue;
     font-weight: 600;"

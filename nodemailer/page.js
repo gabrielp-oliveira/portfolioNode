@@ -5,8 +5,8 @@ function page (targetInfo){
     max-width: 500px;  border: 1px solid rgb(0, 0, 0, 0.1);
     background-color: rgb(239, 239, 247); border-radius: 5px; height: 400px;">
        <div style="margin: 0; padding: 0;">
-           <h2 style="color: rgb(27, 17, 100); padding-left: 10px;">Succes in Delivered the Message</h2>
-           <p style=" margin: 0; padding: 10px;">${messageData[targetInfo.Language].first}
+           <h2 style="color: rgb(27, 17, 100); padding-left: 10px;">${messageData[targetInfo.Language].succes}</h2>
+           <p style=" margin: 0; padding: 10px;">${messageData[targetInfo.Language].contact}
 </p>
        </div>
        <div style="background-color: rgb(235, 222, 213); ">
@@ -19,7 +19,7 @@ function page (targetInfo){
 
            </div>
        </div>
-       <div style="padding-left: 10px;"> ${messageData[targetInfo.Language].second}
+       <div style="padding-left: 10px;"> ${messageData[targetInfo.Language].feedback}
 
        </div>
    </div>`
