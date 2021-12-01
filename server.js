@@ -7,8 +7,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 
 
-let url = process.env.URL?process.env.URL:'http://localhost:3000'
-app.use(cors({origin: url}))
+//let url = process.env.URL?process.env.URL:'http://localhost:3000'
+//app.use(cors({origin: url}))
 app.use(bodyParser.json());
 
 require('./routers/sendEmail')(app)
