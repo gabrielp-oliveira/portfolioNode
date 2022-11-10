@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div style="margin: 0; padding: 0;
+    background-color: #f7f7f7; border-radius: 10px;">
+        <div style="margin: 0; padding: 0;">
+            <img src="cid:img" alt=""
+            style="
+                position: absolute; 
+                object-fit: cover;
+                top: 10px;
+                width: 100%;
+                z-index: 1;
+                background-size: cover;
+                height: 100px;
+                ">
+            <div style="
+                align-self: center;
+                width: 100%;
+                height: min-content;
+                border-radius: 5px;
+                z-index: 5;
+                position: relative;
+                top: 5px;
+                ">
+                <h2 style=" margin: 10px;">{{succes}}</h2>
+                <p style="margin: 10px;">{{feedback1}} <a href="https://gabrielp-oliveira.github.io/" target="_blank"> <span style="
+            color: blue;
+            font-weight: 600;">
+                            portfolio</span></a>, {{feedback2}}
+                </p>
+                <div style="display: flex; width: 100px; margin: 0 30px; ">
+                    <a href="https://www.linkedin.com/in/gabrielp-oliveira" style="margin: 10px; ">
+                        <img src="cid:linkedin" alt="" width="30px" height="30px" style="margin-bottom: 3px; margin-left: 5px;">
+                        <span style="margin: auto;">linkedin</span>
+                    </a>
+                    <a href="mailto:gabriel.pso100@gmail.com" style="margin: 10px; ">
+                        <img src="cid:email" alt="" width="30px" height="30px" style="margin-bottom: 3px;">
+                        <span style="margin: auto;">email</span>
+                    </a>
+                    <a  href="https://github.com/gabrielp-oliveira" target="_blank" style="margin: 10px;"> 
+                        <img src="cid:github" alt="" width="30px" height="30px" style="margin-bottom: 3px; margin-left: 2px">
+                        <span style="margin: auto;">github</span>
+                    </a>
+                    <a href="https://gabrielp-oliveira.github.io/" target="_blank" style="margin: 10px;">
+                        <img src="cid:portfolio"alt=""width="30px"height="30px" style="margin-bottom: 3px; margin-left: 5px;">
+                        <span style="margin: auto;">portfolio</span>
+                    </a>
+                </div>
+
+            </div>
+            <p style=" margin: 0; padding: 10px;">{{contact}}
+            </p>
+        </div>
+        <div style="background-color: rgb(235, 222, 213); ">
+
+            <div style=" margin: 0; margin-bottom: 0px; padding: 10px 40px;">
+
+                <p>Name: <strong>{{name}}</strong></br></p>
+                <p>Email: <strong>{{email}}</strong></br></p></br>
+                <p style=" margin: 0; margin-bottom: 10px; padding: 10px;">{{message}}</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ async function checkEmailDomain(req, res, next){
                 "x-rapidapi-host": process.env.REACT_APP_X_RAPID_API_HOST
             }
         });
-        if (data.data.risk < 10 && data.data.valid) {
+        if (data.data.risk <= 10 && data.data.valid) {
             next()
         } else {
             throw {error: `${data.data.text}, ${data.data.reason}` }

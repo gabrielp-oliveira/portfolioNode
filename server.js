@@ -12,6 +12,7 @@ app.use(cors({origin: url}))
 app.use(bodyParser.json());
 
 require('./routers/sendEmail')(app)
+require('./routers/checkVisit')(app)
 
 
 
