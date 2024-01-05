@@ -33,21 +33,31 @@ const transporter = nodemailer.createTransport({
       accessToken: accessToken
   }
 });
+function getHtmlFile(data){
+  try {
+    
+    const replacements = {
+      succes: messageData[data.Language]?.succes,
+      contact: messageData[data.Language]?.contact,
+      name: data.name,
+      email: data.email,
+      feedback1: messageData[data.Language]?.feedback[0],
+      feedback2: messageData[data.Language]?.feedback[1],
+      message: data.message
+    };
+    return template(replacements);
+  } catch (error) {
+    throw 'ERROR BUILDING HTML FILE -> ' , error
+  }
+
+}
 
 function sendEmail(targetInfo, resp) {
 
   try {
 
-    const replacements = {
-      succes: messageData[targetInfo.Language]?.succes,
-      contact: messageData[targetInfo.Language]?.contact,
-      name: targetInfo.name,
-      email: targetInfo.email,
-      feedback1: messageData[targetInfo.Language]?.feedback[0],
-      feedback2: messageData[targetInfo.Language]?.feedback[1],
-      message: targetInfo.message
-    };
-    const htmlToSend = template(replacements);
+
+    const htmlToSend = getHtmlFile(targetInfo)
 
     
     transporter.sendMail({
