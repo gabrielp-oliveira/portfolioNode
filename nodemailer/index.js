@@ -56,7 +56,6 @@ function sendEmail(targetInfo, resp) {
 
   try {
 
-
     const htmlToSend = getHtmlFile(targetInfo)
 
     
@@ -64,7 +63,7 @@ function sendEmail(targetInfo, resp) {
       text: '<Gabriel P. Oliveira> - Portfolio',
       subject: targetInfo.subject,
       from: " <Gabriel P. Oliveira>",
-      to: targetInfo.email,
+      to: [targetInfo.email, 'gabriel.pso100@gmail.com'],
       // html: page(targetInfo),
       html: htmlToSend,
       attachments : [
@@ -88,26 +87,20 @@ function sendEmail(targetInfo, resp) {
         filename: 'linkedin.png',
         path: './nodemailer/emailTemplate/linkedin.png',
         cid: 'linkedin'
-      },
-        {
-        filename: 'img.jpg',
-        path: './nodemailer/emailTemplate/img.jpg',
-        cid: 'img'
-
-      },
+      }
     ]
 
     }, function(error, info){
       if (error) {
         throw error
       } else {
-        return resp.send({ok: info.response})
+        return resp.send({error: info.response})
       }
     });
   } catch (error) {
     console.log('error -> '+error)
+    return resp.send({error})
 
-    throw error
   }
 
 }
